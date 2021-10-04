@@ -43,4 +43,14 @@ SELECT name, population
 FROM world
 WHERE name IN ('France', 'Germany', 'Italy')
 
+-----#6
+/*
+Show the countries which have a name that including 'United'.
+*/
+SELECT name
+FROM world
+WHERE name LIKE '%United%'
+
+-----#7
+
 
