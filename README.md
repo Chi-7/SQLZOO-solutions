@@ -1,3 +1,3 @@
 # SQLZOO-solutions
-Practice on SQLZOO
+My practice on SQLZOO
 https://sqlzoo.net/wiki/SQL_Tutorial
