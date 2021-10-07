@@ -1,4 +1,4 @@
---SELECT names solutions
+--SECTION - SELECT names
 
 --#1 Show the countreis that start with Y
 
