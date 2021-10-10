@@ -89,9 +89,41 @@ SELECT *
 FROM nobel
 WHERE winner = 'EUGENE O''NEILL' 
 
-#13 
+/*
+#13 List the winners, year and subject where the winner starts with Sir. Show the the most recent first, then by name order.
 
+    Order by yr& winner
+*/
 
+SELECT winner, yr, subject
+FROM nobel
+WHERE winner LIKE 'sir%'
+ORDER BY yr DESC, winner
 
+/*
+#14 Show the 1984 winners and subject ordered by subject and winner name; but list Chemistry and Physics last.
+    
+    寫在SELECT後
+    The expression subject IN ('Chemistry','Physics') can be used as a value - it will be 0 or 1.
+*/
 
+--Engine as MySQL
+SELECT winner, subject
+FROM nobel
+WHERE yr = '1984'
+ORDER BY subject IN ('Physics','Chemistry'), subject, winner
 
+--Engine as Microsoft SQL
+select
+    winner
+    , subject
+from nobel
+where yr = 1984
+order by
+    case
+        when subject in ('Physics', 'Chemistry') then 1
+        else 0
+    end
+    , subject
+    , winner
+ 
